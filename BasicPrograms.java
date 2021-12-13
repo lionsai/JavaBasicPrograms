@@ -1,22 +1,21 @@
 package JavaBasicPrograms;
 import java.util.Scanner;
 
-public class PrimeFactorization {
+public class QuotientAndRemainder {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number:");
+		System.out.println("Enter the Dividend: ");
 		int a = sc.nextInt();
-		
-		for(int i = 2; i < a; i++) {
-			while(a%i == 0) {
-	            System.out.println(i+" ");
-	            a = a/i;
-			}
-		}
-		if(a>2) {
-			System.out.println(a);
-		}
+		System.out.println("Enter the Divisor: ");
+		int b = sc.nextInt();
+		int Q = 0;
+		int R = 0;
+		Q = (a/b);
+		System.out.println("Quotient= "+Q);
+		R = (a%b);
+		System.out.println("Remainder= "+R);
 	}
+
 }
 
