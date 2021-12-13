@@ -1,21 +1,18 @@
 package JavaBasicPrograms;
 import java.util.Scanner;
 
-public class LeapYear {
+public class PowerOfTwo {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the year: ");
-		int year = sc.nextInt();
-		if(year>999 && year<10000){
-			if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0)) {
-		         System.out.println("Given year is a leap year");
-			}else {
-		         System.out.println("Given year is not a leap year");
-			}
-	    }else {
-	    	System.out.println("Please enter only Four digits Year");
-	    }
+		System.out.println("Enter the number:");
+		int N = sc.nextInt();
+		int R = 1;
+		for(int i = 1; i <= N; i++) {
+			R = R*2;
+			System.out.println(R);
+		}
+		
 	}
 
 }
