@@ -1,35 +1,21 @@
 package JavaBasicPrograms;
 import java.util.Scanner;
 
-public class FlipCoin {
-	static int b = 0;
-	static int c = 0;
-	static int d = 0;
-	static int e = 0;
+public class LeapYear {
 
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number of times coin Flips: ");
-		final int j = sc.nextInt();
-		int i=1;
-		while(i<=j) {
-			double a = (double)Math.floor(Math.random()*10)%2;
-			if(a<0.5) {
-				b++;
+		System.out.println("Enter the year: ");
+		int year = sc.nextInt();
+		if(year>999 && year<10000){
+			if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0)) {
+		         System.out.println("Given year is a leap year");
 			}else {
-				c++;
+		         System.out.println("Given year is not a leap year");
 			}
-			i=i+1;
-		
-		}
-		System.out.println("Number of times Tails: "+b);
-		System.out.println("Number of times Heads: "+c);
-		System.out.println("Total no of times coin Flipped:"+j);
-		d = (int)(b*100/j);
-		System.out.println("Percentage of Tails: "+d);
-		e = (int)(c*100/j);
-		System.out.println("Percentage of Heads: "+e);
+	    }else {
+	    	System.out.println("Please enter only Four digits Year");
+	    }
 	}
 
 }
