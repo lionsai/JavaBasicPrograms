@@ -1,28 +1,23 @@
 package JavaBasicPrograms;
+import java.io.*;
 import java.util.Scanner;
 
-public class LargstOfThree {
-
-	public static void main(String[] args) {
-		int a; 
-		int b;
-		int c;
-		int largest;
-		int temp;
-		Scanner sc = new Scanner(System.in);  
-		System.out.println("Enter the first number:");  
-		a = sc.nextInt();  
-		System.out.println("Enter the second number:");  
-		b = sc.nextInt();  
-		System.out.println("Enter the third number:");  
-		c = sc.nextInt();  
+public class Harmonic {
+	
+	static double nthHarmonic(int N)
+	{
+		float harmonic = 1;
+		for (int i = 2; i <= N; i++) {
+			harmonic += (float)1 / i;
+		}
+		return harmonic;
+	}
+				
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the Desired harmonic number");
+		int N = sc.nextInt();
 		
-		temp=a>b?a:b;  
-		largest=c>temp?c:temp;  
-		
-		System.out.println("The largest number is: "+largest);  
-		}  
+		System.out.print(nthHarmonic(N));				     
+	}
 }
-
-
-
