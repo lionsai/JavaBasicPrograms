@@ -1,18 +1,28 @@
 package JavaBasicPrograms;
 import java.util.Scanner;
 
-public class VowelOrConsonant {
+public class LargstOfThree {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Alphabet: ");
-		char a = sc.next().charAt(0);
-		if(a=='a' || a=='e' || a=='i' || a=='o' || a=='u') {
-			System.out.println(a+" is vowel");
-		}else {
-			System.out.println(a+" is consonent");
-		}
-	}
-
+		int a; 
+		int b;
+		int c;
+		int largest;
+		int temp;
+		Scanner sc = new Scanner(System.in);  
+		System.out.println("Enter the first number:");  
+		a = sc.nextInt();  
+		System.out.println("Enter the second number:");  
+		b = sc.nextInt();  
+		System.out.println("Enter the third number:");  
+		c = sc.nextInt();  
+		
+		temp=a>b?a:b;  
+		largest=c>temp?c:temp;  
+		
+		System.out.println("The largest number is: "+largest);  
+		}  
 }
+
+
 
