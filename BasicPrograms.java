@@ -1,22 +1,28 @@
 package JavaBasicPrograms;
 import java.util.Scanner;
 
-public class SwapTwoNumbers {
+public class LargstOfThree {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the First number: ");
-		int a = sc.nextInt();
-		System.out.println("Enter the second number: ");
-		int b = sc.nextInt();
-		int temp = 0;
-		System.out.println(a);
-		System.out.println(b);
-		temp = a;
-		a = b;
-		b = temp;
-		System.out.println("After swap: "+a);
-		System.out.println("After swap: "+b);
-	}
+		int a; 
+		int b;
+		int c;
+		int largest;
+		int temp;
+		Scanner sc = new Scanner(System.in);  
+		System.out.println("Enter the first number:");  
+		a = sc.nextInt();  
+		System.out.println("Enter the second number:");  
+		b = sc.nextInt();  
+		System.out.println("Enter the third number:");  
+		c = sc.nextInt();  
+		
+		temp=a>b?a:b;  
+		largest=c>temp?c:temp;  
+		
+		System.out.println("The largest number is: "+largest);  
+		}  
 }
+
+
 
